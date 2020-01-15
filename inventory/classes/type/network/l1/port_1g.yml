@@ -1,0 +1,57 @@
+---
+classes:
+  - type.network.l1.port
+parameters:
+  l1_100m_port: 
+    type: "l1_100m_port"
+    L1: 
+      type: ${network:l1:port:type:ethernet}
+      modes:
+        - ${network:l1:port:speed:10BASE-T}
+        - ${network:l1:port:speed:100BASE-T}
+    __schema:
+      properties:
+        type:
+          type: string
+          enum: [ 'l1_100m_port' ]
+
+  l1_1g_port: 
+    type: "l1_1g_port"
+    L1: 
+      type: ${network:l1:port:type:ethernet}
+      modes:
+        - ${network:l1:port:speed:10BASE-T}
+        - ${network:l1:port:speed:100BASE-T}
+        - ${network:l1:port:speed:1000BASE-T}
+    __schema:
+      properties:
+        type:
+          type: string
+          enum: [ 'l1_1g_port' ]
+
+  l1_10g_port: 
+    type: "l1_10g_port"
+    L1: 
+      type: ${network:l1:port:type:optic}
+      modes:
+        - ${network:l1:port:speed:1000BASE-T}
+        - ${network:l1:port:speed:10GBASE-T}
+    __schema:
+      properties:
+        type:
+          type: string
+          enum: [ 'l1_10g_port' ]
+
+  l1_40g_port: 
+    type: "l1_40g_port"
+    L1: 
+      type: ${network:l1:port:type:optic}
+      modes:
+        - ${network:l1:port:speed:1000BASE-T}
+        - ${network:l1:port:speed:10GBASE-T}
+        - ${network:l1:port:speed:40GBASE-T}
+    __schema:
+      properties:
+        type:
+          type: string
+          enum: [ 'l1_40g_port' ]

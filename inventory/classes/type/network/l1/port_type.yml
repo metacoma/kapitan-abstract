@@ -1,0 +1,7 @@
+parameters:
+  network:
+    l1:
+      port:
+        type:
+          optic: "optic"
+          ethernet: "ethernet"

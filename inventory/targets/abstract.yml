@@ -1,0 +1,34 @@
+---
+classes:
+  - abstract.object
+#  - type.network.l1.port_speed
+  - type.network.l1.port
+  - type.network.l1.port_1g
+  - type.network.hw.switch
+  - type.network.hw.hp_procurve_2810
+parameters:
+  runtime:
+    image: kapitan-apstra:latest
+  kapitan:
+    vars:
+      target: abstract
+    compile:
+      - input_paths:
+          - templates/abstract/generator.lua
+        output_path: minetest_mod/
+        input_type: jinja2
+
+      - input_paths: 
+          - templates/util/check.lua
+        output_path: minetest_mod/
+        input_type: copy
+
+      - input_paths: 
+          - templates/util/pprint.lua
+        output_path: minetest_mod/
+        input_type: copy
+
+      - input_paths: 
+          - templates/runtime/*
+        output_path: runtime
+        input_type: jinja2

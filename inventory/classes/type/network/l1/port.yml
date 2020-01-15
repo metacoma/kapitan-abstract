@@ -1,0 +1,47 @@
+---
+classes:
+  - type.network.l1.port_speed
+  - type.network.l1.port_type
+parameters:
+
+  l1_port:
+    type: "l1_port"
+    name: "port 1"
+    L1:
+      type: 
+      link: # connected to
+      modes: []
+
+    __schema:
+      type: "object"  
+      required: 
+        - type
+      properties:
+        L1:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: 
+               - ${network:l1:port:type:optic}
+               - ${network:l1:port:type:ethernet}
+            link:
+              oneOf:
+                - type: object
+                - type: "null"
+            modes:
+              type: array
+              items:
+                type: string
+                enum:
+                  - ${network:l1:port:speed:10BASE-T}
+                  - ${network:l1:port:speed:100BASE-T}
+                  - ${network:l1:port:speed:1000BASE-T}
+                  - ${network:l1:port:speed:10GBASE-T}
+                  - ${network:l1:port:speed:40GBASE-T}
+
+  # define child objects
+  l1_100m_port: ${l1_port}
+  l1_1g_port: ${l1_port}
+  l1_10g_port: ${l1_port}
+  l1_40g_port: ${l1_port}

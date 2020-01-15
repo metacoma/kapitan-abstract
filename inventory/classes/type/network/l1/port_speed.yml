@@ -1,0 +1,10 @@
+parameters:
+  network:
+    l1:
+      port:
+        speed:
+          10BASE-T: "10BASE-T"
+          100BASE-T: "100BASE-T"
+          1000BASE-T: "1000BASE-T"
+          10GBASE-T: "10GBASE-T"
+          40GBASE-T: "40GBASE-T"

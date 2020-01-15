@@ -1,0 +1,19 @@
+---
+parameters:
+  switch:
+    type: "switch"
+    name: "basic switch"
+    port1:
+    __schema:
+      type: object
+      properties:
+        name:
+          type: string
+        type: 
+          type: string
+          enum: [ "switch" ]
+        port1: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"

@@ -1,0 +1,21 @@
+---
+parameters:
+  non_scheme_object:
+    name: foobar
+  object:
+    type: object
+    foo: "bar"
+    bar: 42
+
+    __schema:
+      type: "object"
+      required: 
+        - type
+      properties: 
+        type: 
+          type: string
+          enum: "object"
+        foo: 
+          type: string
+        bar: 
+          type: number

@@ -1,0 +1,90 @@
+---
+classes:
+  - type.network.hw.switch
+parameters:
+  hp_procurve_2810:
+    type: "hp_procurve_2810"
+    name: "HP ProCurve 2810"
+    port1:
+    port2:
+    port3:
+    port4:
+    port5:
+    port6:
+    port7:
+    port8:
+    port9:
+    port10:
+    port11:
+    port12:
+    port13:
+    port14:
+    port15:
+    port16:
+    port17:
+    port18:
+    port19:
+    port20:
+    port21:
+    port22:
+    port23:
+    port24:
+    __schema:
+      type: object
+      properties:
+        name:
+          type: string
+        type: 
+          type: string
+          enum: [ "${hp_procurve_2810:type}" ]
+        port1: &eth_1g_port
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_100m_port:__schema}
+            - type: "null"
+        port2: 
+          <<: *eth_1g_port
+        port3: 
+          <<: *eth_1g_port
+        port4: 
+          <<: *eth_1g_port
+        port5: 
+          <<: *eth_1g_port
+        port6: 
+          <<: *eth_1g_port
+        port7: 
+          <<: *eth_1g_port
+        port8: 
+          <<: *eth_1g_port
+        port9: 
+          <<: *eth_1g_port
+        port10: 
+          <<: *eth_1g_port
+        port11: 
+          <<: *eth_1g_port
+        port12: 
+          <<: *eth_1g_port
+        port13: 
+          <<: *eth_1g_port
+        port14: 
+          <<: *eth_1g_port
+        port15: 
+          <<: *eth_1g_port
+        port16: 
+          <<: *eth_1g_port
+        port17: 
+          <<: *eth_1g_port
+        port18: 
+          <<: *eth_1g_port
+        port19: 
+          <<: *eth_1g_port
+        port20: 
+          <<: *eth_1g_port
+        port21: 
+          <<: *eth_1g_port
+        port22: 
+          <<: *eth_1g_port
+        port23: 
+          <<: *eth_1g_port
+        port24: 
+          <<: *eth_1g_port
