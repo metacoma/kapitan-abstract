@@ -6,4 +6,3 @@ docker run --rm -it --entrypoint /bin/sh	\
 	-v `pwd`:/kapitan												\
   {{ p.runtime.image }}                   \
 	-c "$*"
-

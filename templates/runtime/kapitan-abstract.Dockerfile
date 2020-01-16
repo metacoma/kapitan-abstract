@@ -26,4 +26,7 @@ RUN pip3 install kapitan
 
 #RUN tsc ./spec/suite.lua
 # ^^^^ commented, because tests has failed
+RUN apt-get update && apt-get install -y luarocks git build-essential cmake libyaml-dev lua-cjson rapidjson-dev vim
+RUN luarocks install lyaml
+RUN luarocks install rapidjson
 

@@ -13,7 +13,7 @@ parameters:
       properties:
         type:
           type: string
-          enum: [ 'l1_100m_port' ]
+          enum: [ '${l1_100m_port:type}' ]
 
   l1_1g_port: 
     type: "l1_1g_port"
@@ -27,7 +27,7 @@ parameters:
       properties:
         type:
           type: string
-          enum: [ 'l1_1g_port' ]
+          enum: [ '${l1_1g_port:type}' ]
 
   l1_10g_port: 
     type: "l1_10g_port"
@@ -40,7 +40,7 @@ parameters:
       properties:
         type:
           type: string
-          enum: [ 'l1_10g_port' ]
+          enum: [ '${l1_10g_port:type}' ]
 
   l1_40g_port: 
     type: "l1_40g_port"
@@ -54,4 +54,4 @@ parameters:
       properties:
         type:
           type: string
-          enum: [ 'l1_40g_port' ]
+          enum: [ '${l1_40g_port:type}' ]

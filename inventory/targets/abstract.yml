@@ -1,7 +1,7 @@
 ---
 classes:
   - abstract.object
-#  - type.network.l1.port_speed
+  - type.network.l1.port_speed
   - type.network.l1.port
   - type.network.l1.port_1g
   - type.network.hw.switch
@@ -108,7 +108,7 @@ parameters:
 
 
   runtime:
-    image: kapitan-apstra:latest
+    image: kapitan-abstract:latest
   kapitan:
     vars:
       target: abstract

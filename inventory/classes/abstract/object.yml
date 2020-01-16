@@ -9,10 +9,8 @@ parameters:
 
     __schema:
       type: "object"
-      required: 
-        - type
       properties: 
-        type: 
+        foo:
           type: string
           enum: [ "object" ]
         foo: 
