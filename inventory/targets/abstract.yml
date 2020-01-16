@@ -45,147 +45,68 @@ parameters:
           type: string
         type: 
           type: string
-          enum: [ "switch" ]
-        port1: 
+          enum: [ "${switch10:type}" ]
+        port1: &port_1g
           oneOf: 
             - ${l1_100m_port:__schema}
             - ${l1_1g_port:__schema}
             - type: "null"
         port2: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port3: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port4: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port5: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port6: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port7: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port8: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port9: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port10: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port11: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port12: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port13: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port14: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port15: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port16: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port17: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port18: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port19: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port20: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port21: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port22: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port23: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port24: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port25: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port26: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port27: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
         port28: 
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_1g_port:__schema}
-            - type: "null"
+          <<: *port_1g
+
+
   runtime:
     image: kapitan-apstra:latest
   kapitan:
