@@ -14,7 +14,7 @@ parameters:
       properties: 
         type: 
           type: string
-          enum: "object"
+          enum: [ "object" ]
         foo: 
           type: string
         bar: 

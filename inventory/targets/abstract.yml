@@ -7,6 +7,106 @@ classes:
   - type.network.hw.switch
   - type.network.hw.hp_procurve_2810
 parameters:
+  switch10:
+    type: "switch10"
+    name: "basic switch"
+    port1:
+    port2:
+    port3:
+    port4:
+    port5:
+    port6:
+    port7:
+    port8:
+    port9:
+    port10:
+    port11:
+    port12:
+    port13:
+    port14:
+    port15:
+    port16:
+    port17:
+    port18:
+    port19:
+    port20:
+    port21:
+    port22:
+    port23:
+    port24:
+    port25:
+    port26:
+    port27:
+    port28:
+    __schema:
+      type: object
+      properties:
+        name:
+          type: string
+        type: 
+          type: string
+          enum: [ "${switch10:type}" ]
+        port1: &port_1g
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port2: 
+          <<: *port_1g
+        port3: 
+          <<: *port_1g
+        port4: 
+          <<: *port_1g
+        port5: 
+          <<: *port_1g
+        port6: 
+          <<: *port_1g
+        port7: 
+          <<: *port_1g
+        port8: 
+          <<: *port_1g
+        port9: 
+          <<: *port_1g
+        port10: 
+          <<: *port_1g
+        port11: 
+          <<: *port_1g
+        port12: 
+          <<: *port_1g
+        port13: 
+          <<: *port_1g
+        port14: 
+          <<: *port_1g
+        port15: 
+          <<: *port_1g
+        port16: 
+          <<: *port_1g
+        port17: 
+          <<: *port_1g
+        port18: 
+          <<: *port_1g
+        port19: 
+          <<: *port_1g
+        port20: 
+          <<: *port_1g
+        port21: 
+          <<: *port_1g
+        port22: 
+          <<: *port_1g
+        port23: 
+          <<: *port_1g
+        port24: 
+          <<: *port_1g
+        port25: 
+          <<: *port_1g
+        port26: 
+          <<: *port_1g
+        port27: 
+          <<: *port_1g
+        port28: 
+          <<: *port_1g
+
+
   runtime:
     image: kapitan-apstra:latest
   kapitan:

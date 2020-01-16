@@ -1,7 +1,8 @@
-local rapidjson = require("rapidjson")
+-- local rapidjson = require("rapidjson")
 local lyaml = require("lyaml")
 local pprint = require("pprint")
-local jsonschema = require 'resty.ljsonschema'
+local cjson = require("cjson")
+local jsonschema = require('jsonschema')
 
 function table_merge(t1, t2)
     for k,v in pairs(t2) do

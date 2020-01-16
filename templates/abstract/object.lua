@@ -3,7 +3,8 @@
 local {{ class_name }} = {}
 {{ class_name }}.__index = {{ class_name }}
 
-local {{ class_name }}_raw = rapidjson.decode('{{ p[class_type] | to_json }}')
+-- local {{ class_name }}_raw = rapidjson.decode('{{ p[class_type] | to_json }}')
+local {{ class_name }}_raw = cjson.decode('{{ p[class_type] | to_json }}')
 
 {% if have_schema %}
 local {{ class_name }}_schema = {{ class_name }}_raw["{{ schema_keyword }}"]
@@ -14,7 +15,10 @@ if ({{ class_name }}_schema["properties"]["type"] == nil) then
     enum = { "{{ class_type }}" }
   }
 end
-local {{ class_name }}_schema_validator = rapidjson.SchemaValidator(rapidjson.SchemaDocument(rapidjson.Document({{ class_name }}_schema)))
+--local {{ class_name }}_schema_validator = rapidjson.SchemaValidator(rapidjson.SchemaDocument(rapidjson.Document({{ class_name }}_schema)))
+--pprint({{ class_name }}_schema)
+local {{ class_name }}_schema_validator = jsonschema.generate_validator({{ class_name }}_schema)
+
 {% endif %}
 local {{ class_name }}_properties = {{ class_name }}_raw
 {{ class_name }}_properties["{{ schema_keyword }}"] = nil
@@ -55,7 +59,7 @@ end
 {% if have_schema %}
 function {{ class_name }}.__validate(self, value) 
   assert(type(value) == "table", "function {{ class_name }}.__validate accepts only table in argument")
-  return {{ class_name }}_schema_validator:validate(rapidjson.Document(value)) 
+  return {{ class_name }}_schema_validator(value) 
 end
 {% endif %}
 
