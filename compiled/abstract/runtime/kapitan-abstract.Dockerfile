@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-RUN apt-get update && apt-get install -y luarocks git build-essential cmake libyaml-dev rapidjson-dev 
+RUN apt-get update && apt-get install -y luarocks git build-essential cmake libyaml-dev rapidjson-dev jq
 RUN luarocks install net-url
 RUN luarocks install lua-cjson
 RUN luarocks install lyaml
@@ -10,8 +10,6 @@ RUN git submodule update --init --recursive
 RUN luarocks install ./ljsonschema-scm-1.rockspec
 RUN luarocks install https://raw.githubusercontent.com/jdesgats/telescope/master/rockspecs/telescope-scm-1.rockspec
 
-RUN apt-get install -y python3-pip
-RUN pip3 install kapitan
 
 #/usr/bin/lua5.1: /usr/local/share/lua/5.1/jsonschema/init.lua:188: [string "jsonschema:anonymous"]:30: '=' expected near 'label_1'
 #stack traceback:
@@ -26,3 +24,7 @@ RUN pip3 install kapitan
 
 #RUN tsc ./spec/suite.lua
 # ^^^^ commented, because tests has failed
+
+
+RUN apt-get install -y python3-pip
+RUN pip3 install kapitan
