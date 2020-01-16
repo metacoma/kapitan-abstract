@@ -7,6 +7,185 @@ classes:
   - type.network.hw.switch
   - type.network.hw.hp_procurve_2810
 parameters:
+  switch10:
+    type: "switch10"
+    name: "basic switch"
+    port1:
+    port2:
+    port3:
+    port4:
+    port5:
+    port6:
+    port7:
+    port8:
+    port9:
+    port10:
+    port11:
+    port12:
+    port13:
+    port14:
+    port15:
+    port16:
+    port17:
+    port18:
+    port19:
+    port20:
+    port21:
+    port22:
+    port23:
+    port24:
+    port25:
+    port26:
+    port27:
+    port28:
+    __schema:
+      type: object
+      properties:
+        name:
+          type: string
+        type: 
+          type: string
+          enum: [ "switch" ]
+        port1: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port2: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port3: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port4: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port5: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port6: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port7: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port8: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port9: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port10: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port11: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port12: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port13: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port14: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port15: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port16: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port17: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port18: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port19: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port20: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port21: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port22: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port23: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port24: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port25: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port26: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port27: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
+        port28: 
+          oneOf: 
+            - ${l1_100m_port:__schema}
+            - ${l1_1g_port:__schema}
+            - type: "null"
   runtime:
     image: kapitan-apstra:latest
   kapitan:

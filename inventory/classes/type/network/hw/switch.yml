@@ -1,4 +1,6 @@
 ---
+classes:
+  - type.network.l1.port_1g
 parameters:
   switch:
     type: "switch"

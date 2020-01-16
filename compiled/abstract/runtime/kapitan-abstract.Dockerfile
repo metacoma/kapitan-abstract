@@ -26,4 +26,3 @@ RUN pip3 install kapitan
 
 #RUN tsc ./spec/suite.lua
 # ^^^^ commented, because tests has failed
-
