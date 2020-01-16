@@ -31,60 +31,71 @@ parameters:
     port24:
     __schema:
       type: object
+      definitions:
+        port_1g:
+          $id: "#port_1g"
+          oneOf:
+            - ${l1_100m_port:__schema}
+            - type: "null"
       properties:
         name:
           type: string
         type: 
           type: string
           enum: [ "${hp_procurve_2810:type}" ]
-        port1: &eth_1g_port
-          oneOf: 
-            - ${l1_100m_port:__schema}
-            - ${l1_100m_port:__schema}
-            - type: "null"
-        port2: 
-          <<: *eth_1g_port
-        port3: 
-          <<: *eth_1g_port
-        port4: 
-          <<: *eth_1g_port
-        port5: 
-          <<: *eth_1g_port
-        port6: 
-          <<: *eth_1g_port
-        port7: 
-          <<: *eth_1g_port
-        port8: 
-          <<: *eth_1g_port
-        port9: 
-          <<: *eth_1g_port
-        port10: 
-          <<: *eth_1g_port
-        port11: 
-          <<: *eth_1g_port
-        port12: 
-          <<: *eth_1g_port
-        port13: 
-          <<: *eth_1g_port
-        port14: 
-          <<: *eth_1g_port
-        port15: 
-          <<: *eth_1g_port
-        port16: 
-          <<: *eth_1g_port
-        port17: 
-          <<: *eth_1g_port
-        port18: 
-          <<: *eth_1g_port
-        port19: 
-          <<: *eth_1g_port
-        port20: 
-          <<: *eth_1g_port
-        port21: 
-          <<: *eth_1g_port
-        port22: 
-          <<: *eth_1g_port
-        port23: 
-          <<: *eth_1g_port
-        port24: 
-          <<: *eth_1g_port
+        port1:
+          $ref: "#/definitions/port_1g"
+        port2:
+          $ref: "#/definitions/port_1g"
+        port3:
+          $ref: "#/definitions/port_1g"
+        port4:
+          $ref: "#/definitions/port_1g"
+        port5:
+          $ref: "#/definitions/port_1g"
+        port6:
+          $ref: "#/definitions/port_1g"
+        port7:
+          $ref: "#/definitions/port_1g"
+        port8:
+          $ref: "#/definitions/port_1g"
+        port9:
+          $ref: "#/definitions/port_1g"
+        port10:
+          $ref: "#/definitions/port_1g"
+        port11:
+          $ref: "#/definitions/port_1g"
+        port12:
+          $ref: "#/definitions/port_1g"
+        port13:
+          $ref: "#/definitions/port_1g"
+        port14:
+          $ref: "#/definitions/port_1g"
+        port15:
+          $ref: "#/definitions/port_1g"
+        port16:
+          $ref: "#/definitions/port_1g"
+        port17:
+          $ref: "#/definitions/port_1g"
+        port18:
+          $ref: "#/definitions/port_1g"
+        port19:
+          $ref: "#/definitions/port_1g"
+        port20:
+          $ref: "#/definitions/port_1g"
+        port21:
+          $ref: "#/definitions/port_1g"
+        port22:
+          $ref: "#/definitions/port_1g"
+        port23:
+          $ref: "#/definitions/port_1g"
+        port24:
+          $ref: "#/definitions/port_1g"
+        port25:
+          $ref: "#/definitions/port_1g"
+        port26:
+          $ref: "#/definitions/port_1g"
+        port27:
+          $ref: "#/definitions/port_1g"
+        port28:
+          $ref: "#/definitions/port_1g"
